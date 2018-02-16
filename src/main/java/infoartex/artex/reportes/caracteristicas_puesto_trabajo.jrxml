@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
+<!-- 2017-05-07T02:25:54 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="caracteristicas_puesto_trabajo" pageWidth="792" pageHeight="612" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0959a941-81b2-4971-a840-68899b0690b7">
+	<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="infoartex.artex.dominio.Periferico"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="computadora" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="dirSubReporte" class="java.lang.String"/>
+	<parameter name="listado" class="java.util.List"/>
+	<parameter name="noInventario" class="java.lang.String"/>
+	<parameter name="serie" class="java.lang.String"/>
+	<parameter name="modeloBoard" class="java.lang.String"/>
+	<parameter name="modeloCPU" class="java.lang.String"/>
+	<parameter name="velocidadCPU" class="java.lang.String"/>
+	<parameter name="tiporam" class="java.lang.String"/>
+	<parameter name="capacidadRAM" class="java.lang.String"/>
+	<parameter name="capacidadHDD" class="java.lang.String"/>
+	<parameter name="modeloHDD" class="java.lang.String"/>
+	<parameter name="noSerieHdd" class="java.lang.String"/>
+	<parameter name="invTeclado" class="java.lang.String"/>
+	<parameter name="invMouse" class="java.lang.String"/>
+	<parameter name="invBocinas" class="java.lang.String"/>
+	<parameter name="invModem" class="java.lang.String"/>
+	<parameter name="responsable" class="java.lang.String"/>
+	<parameter name="area" class="java.lang.String"/>
+	<parameter name="logo" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="83" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="20" width="350" height="16" uuid="a14cd3f0-9753-47c9-8e73-b77009e41fec"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[3. Características Principales del Puesto de Trabajo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="57" width="240" height="20" uuid="b6b97afc-a1ac-47f2-883f-dfde47574f99"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ PARA USO DE SEGURIDAD INFORMÁTICA]]></text>
+			</staticText>
+			<image hAlign="Center">
+				<reportElement x="584" y="3" width="154" height="50" uuid="d1d7807c-d57b-43eb-9731-4ba29906cc21"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="393" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="297" height="20" uuid="ce03a0f9-acc3-4d98-9d21-8465ad670ca6"/>
+				<text><![CDATA[CARACTERISTICAS PRINCIPALES DEL PUESTO DE TRABAJO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="34" width="297" height="16" uuid="40d1d636-179f-4e93-a2da-d6428ad111d8"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ENTIDAD:__________________________________                                                                                                           ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="250" height="15" uuid="3c7312cb-5eb0-478c-b6e9-4b7b10ad926f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ÁREA:_____________________________________  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="60" width="290" height="14" uuid="44a04d85-8934-4009-8d98-e0360a82147f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PUESTO DE TRABAJO:_________________________]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="92" width="170" height="30" uuid="c3a9f7be-4005-4374-9350-a16281a33c5a"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["COMPUTADORA\n"+$P{computadora}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="92" width="158" height="30" uuid="70c3d659-5095-4464-bb14-72655525a57f"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NO.INVENTARIO\n"+$P{noInventario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="92" width="267" height="30" uuid="6ae70e40-31e1-493e-8fd6-d7f6393a39dd"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["SI ES PORTÁTIL NO. DE SERIE\n"+$P{serie}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="122" width="596" height="30" uuid="25e88b38-f0c0-465e-b6a2-7e1612413ad3">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["MODELO DE LA MOTHERBOARD\n"+$P{modeloBoard}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="620" y="92" width="126" height="30" uuid="7269b5bc-9278-4464-9611-e8fdd0cbd416"/>
+				<text><![CDATA[FOLIO:_______________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="620" y="160" width="126" height="30" uuid="405ddb1a-3775-40f3-ac05-6818b6a2279c"/>
+				<text><![CDATA[CUÑO:_______________]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="152" width="170" height="30" uuid="7e401c72-293c-4384-bf2e-c6ed8de9751f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["MODELO DEL CPU\n"+$P{modeloCPU}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="152" width="426" height="30" uuid="87c8eef0-d641-4166-b0e6-f446dbdf751e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["VELOCIDAD\n"+$P{velocidadCPU}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="182" width="170" height="30" uuid="de36003b-1f1e-4404-b723-d612c5ea09b6">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["MEMORIA RAM"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="182" width="426" height="30" uuid="39f6719d-312a-4d77-94b1-fd564efc256e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["DISCO DURO"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="212" width="80" height="30" uuid="33bfc020-bd2c-4d93-8211-a791d35d3c25">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["TIPO\n"+$P{tiporam}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="212" width="90" height="30" uuid="fd1b8ec7-7f2b-43be-b2aa-1b40d11c39c7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CAPACIDAD\n"+$P{capacidadRAM}+" MB"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="212" width="126" height="30" uuid="f4b8b178-5f6e-46fa-b8a6-54ffe9cf1f42">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CAPACIDAD\n"+$P{capacidadHDD}+" GB"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="296" y="212" width="130" height="30" uuid="01b7f677-4533-45ba-a9a8-b846cf0344bd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["MODELO\n"+$P{modeloHDD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="427" y="212" width="169" height="30" uuid="b64a9992-a4c7-4013-84d8-f7bedabea219">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NO. DE SERIE\n"+$P{noSerieHdd}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" x="1" y="280" width="90" height="20" uuid="ebe477d9-9a9c-4081-8e09-3873b2e053b2">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["TECLADO"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" x="91" y="280" width="90" height="20" uuid="8754159b-448a-4be5-94ad-39e77d58bc56">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NO. DE SERIE"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" x="277" y="280" width="100" height="20" uuid="1cdb2c45-d3c4-4fc3-8115-23f6cabcdd34">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NO. DE SERIE"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" x="377" y="280" width="100" height="20" uuid="c38f27fc-cb27-4ab6-9c45-76ecf1ba29a9">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["BOCINAS"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" x="659" y="280" width="90" height="20" uuid="0ff15b77-88f5-4b3b-a2d5-17449d390114">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NO. DE SERIE"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" x="577" y="280" width="82" height="20" uuid="ebf44795-5f1b-45c6-a0ca-956891d2b84e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["MODEM"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" x="477" y="280" width="100" height="20" uuid="dfca0021-7061-4d70-a9e5-44843efb2e65">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NO. DE SERIE"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" x="181" y="280" width="96" height="20" uuid="c9340cad-8121-4670-9028-53d4bec8c734">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["MOUSE"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" x="1" y="300" width="90" height="20" uuid="c9d5dcd1-e9de-4b9e-8472-d3e2d12757b5">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{invTeclado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" x="91" y="300" width="90" height="20" uuid="ac6e01d0-4c6e-42c5-af5b-3b5bfb4e81b5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" x="181" y="300" width="96" height="20" uuid="a3c8211c-828b-4284-b8bd-18fccdf67b12">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{invMouse}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" x="277" y="300" width="100" height="20" uuid="6063973a-f806-46ae-8635-ccc8343886f9">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" x="377" y="300" width="100" height="20" uuid="4d33d238-0037-41c4-bee2-93bb606c5b92">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{invBocinas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" x="477" y="300" width="100" height="20" uuid="33ac250d-6618-4b3a-9d92-26a2b9bd8bdf">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" x="577" y="300" width="82" height="20" uuid="4088daf2-33eb-4c0c-b36e-fbc7d2ca5806">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{invModem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" x="659" y="300" width="90" height="20" uuid="fa6f4718-2515-4057-bb28-922e26e3f3ab">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" x="1" y="320" width="180" height="20" uuid="5ce39f66-1577-4e03-8649-4d0302a8d393">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["OTROS PERIFÉRICOS"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" x="181" y="320" width="196" height="20" uuid="faa20c78-bfff-4b9d-9492-b04a1f68999b">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["MODELO"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" x="377" y="320" width="200" height="20" uuid="8b33ecf7-82a3-4df2-83c0-8dffc3fb024a">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NO. DE SERIE"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" x="577" y="320" width="172" height="20" uuid="20af192c-17dd-457d-9706-a9102a4f3d32">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NO. DE INVENTARTIO"]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="1" y="340" width="747" height="20" uuid="1267b4c0-a4a3-4397-8e18-216ab5bcab4f"/>
+				<dataSourceExpression><![CDATA[new JRBeanCollectionDataSource($P{listado})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{dirSubReporte}+"perifericos.jasper"]]></subreportExpression>
+			</subreport>
+			<textField>
+				<reportElement x="60" y="53" width="100" height="20" uuid="8060f17a-0da7-4650-bf6d-eb74123640c4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{area}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="392" y="53" width="138" height="20" uuid="1a18803a-6c01-42b7-9ace-cf73861fbf54"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{computadora}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="22" splitType="Stretch"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="105">
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" x="1" y="65" width="328" height="24" uuid="36c3cb03-c4c1-4f3d-a19c-98770883063d"/>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[NOMBRE Y APELLIDOS : ________________________________  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" x="372" y="20" width="380" height="70" uuid="be5db150-a9c8-4d2c-93c1-0175bc20f573"/>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[ME RESPONSABILIZO CON LA INTEGRIDAD DEL EQUIPAMIENTO Y SUS COMPONENTES DESGLOSADOS EN ESTE MODELO.
+
+
+				FIRMA:_____________________
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="62" width="156" height="14" uuid="b114dea9-8af6-4003-af40-243dc2946342"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{responsable}]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+</jasperReport>

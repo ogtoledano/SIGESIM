@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
+<!-- 2017-05-07T02:21:03 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="software_autorizado" pageWidth="792" pageHeight="612" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d981a799-09e8-4c1e-8aa4-f2f5016398a5">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="infoartex.artex.dominio.Periferico"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="listado" class="java.util.List">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="dirSubReporte" class="java.lang.String"/>
+	<parameter name="entidad" class="java.lang.String"/>
+	<parameter name="area" class="java.lang.String"/>
+	<parameter name="puesto" class="java.lang.String"/>
+	<parameter name="logo" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="20" width="350" height="16" uuid="f1c7d929-f5e1-406a-8de9-ea3ee46b9601"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[4. Software autorizado a ejecutarse en el equipo.]]></text>
+			</staticText>
+			<image hAlign="Center">
+				<reportElement x="588" y="10" width="154" height="50" uuid="36a94b86-c6b5-4ff9-aa9f-ff40c6dbb2e0"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="227" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="400" height="20" uuid="8e330e72-d0b7-4b00-9536-009bf22723e8"/>
+				<text><![CDATA[REGISTRO DE SOFTWARE AUTORIZADO A EJECUTARSE EN EL EQUIPO.                                               ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="454" y="40" width="297" height="20" uuid="1553c3ab-544c-4ca8-9634-e1b23ea49541"/>
+				<text><![CDATA[CARACTERISTICAS PRINCIPALES DEL PUESTO DE TRABAJO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="580" y="11" width="170" height="20" uuid="7e4d67b8-7ab0-4a77-8742-b0cba1f8f438"/>
+				<text><![CDATA[FOLIO:______________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="118" width="100" height="19" uuid="2b83aa0a-6283-4064-8229-aaf1ac4990b0"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[No.Orden]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="101" y="118" width="180" height="19" uuid="e668cc4f-8cbe-4c50-9f1f-d02451162461"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Software Autorizado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="118" width="189" height="19" uuid="ea1b6d00-91b0-492f-9ac9-29b7853e4b41"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Nombre de quien Instala]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="118" width="140" height="19" uuid="0ee6ad6b-6633-481c-885e-c5f10318e448"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Firma]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="610" y="118" width="141" height="19" uuid="0ed1fbd1-c84e-4ac1-9fd0-f58d92fae963"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Fecha de Instalación]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="1" y="138" width="748" height="20" uuid="c26b513c-b90f-4676-86d4-7eb7b11debd5"/>
+				<dataSourceExpression><![CDATA[new JRBeanCollectionDataSource($P{listado})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{dirSubReporte}+"softwares.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="-1" y="80" width="200" height="19" uuid="319978bf-67d3-4de1-ba9d-003c279fa9a4"/>
+				<text><![CDATA[ENTIDAD:__________________________    ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="80" width="204" height="19" uuid="146822dd-2588-41d2-8edf-ee648e8cd8e2"/>
+				<text><![CDATA[ÁREA:_____________________________   ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="482" y="80" width="230" height="19" uuid="0f61c59d-4ea2-4783-b064-64748e0c28d5"/>
+				<text><![CDATA[Puesto de Trabajo:________________________]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="77" width="140" height="14" uuid="697ccad3-c70f-4d21-97ae-501510485f60"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{entidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="281" y="75" width="159" height="16" uuid="0beba015-2312-449c-ae59-e487e4ea8643"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{area}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="570" y="76" width="130" height="16" uuid="0e97bf97-4f32-4307-8948-625a9e01f4e8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{puesto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,111 @@
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Estado del sistema</h1>
+			</div>
+		</div><!--/.row-->
+		
+		<div class="row">
+			<div class="col-xs-12 col-md-6 col-lg-3">
+				<div class="panel panel-blue panel-widget ">
+					<div class="row no-padding">
+						<div class="col-sm-3 col-lg-5 widget-left">
+							<i class="icon-wrench icon-grande"></i>
+						</div>
+						<div class="col-sm-9 col-lg-7 widget-right">
+							<div class="large" location="cantInterrupciones"></div>
+							<div class="text-muted">Interrupciones</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6 col-lg-3">
+				<div class="panel panel-orange panel-widget">
+					<div class="row no-padding">
+						<div class="col-sm-3 col-lg-5 widget-left">
+							<i class="icon-briefcase icon-grande"></i>
+						</div>
+						<div class="col-sm-9 col-lg-7 widget-right">
+							<div class="large" location="cantMantenimientos"></div>
+							<div class="text-muted">Mantenimientos</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6 col-lg-3">
+				<div class="panel panel-teal panel-widget">
+					<div class="row no-padding">
+						<div class="col-sm-3 col-lg-5 widget-left">
+							<i class="icon-desktop icon-grande"></i>
+						</div>
+						<div class="col-sm-9 col-lg-7 widget-right">
+							<div class="large" location="cantMedios"></div>
+							<div class="text-muted">Medios Inform&aacute;ticos</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6 col-lg-3">
+				<div class="panel panel-red panel-widget">
+					<div class="row no-padding">
+						<div class="col-sm-3 col-lg-5 widget-left">
+							<i class="icon-table icon-grande"></i>
+						</div>
+						<div class="col-sm-9 col-lg-7 widget-right">
+							<div class="large" location="cantOrdenes"></div>
+							<div class="text-muted"  >&Oacute;rdenes de trabajo</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading "><div class="col-xs-1"><i class="icon-bar-chart" style="font-size:40px;"></i></div><div class="col-xs-11">Comportamiento de las interrupciones</div></div>
+					<div class="panel-body">
+						<div class="canvas-wrapper" location="contenido">
+							
+							<!-- <canvas class="main-chart" id="line-chart" height="200" width="600"></canvas> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->
+		
+		<div class="row">
+			<div class="col-lg-4 col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel">
+						<h4>Estado de las interrupciones</h4>
+						<div location ="interrupciones">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel">
+						<h4>Mantenimientos por departamentos </h4>
+						<div location="mantenimientos">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel">
+						<h4>Medios inform&aacute;ticos por departamento</h4>
+						<div location="medios">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->
+								
+		<div class="row">
+			<div class="col-md-12" location="tareasHoy">
+							
+			</div><!--/.col-->
+		</div><!--/.row-->

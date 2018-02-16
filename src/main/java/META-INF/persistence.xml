@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="provider" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>infoartex.artex.dominio.Usuario</class>
+		<class>infoartex.artex.dominio.Sesion</class>	
+		<class>infoartex.artex.dominio.Departamento</class>
+		<class>infoartex.artex.dominio.Interrupcion</class>	
+		<class>infoartex.artex.dominio.MedioInformatico</class>		
+		<class>infoartex.artex.dominio.PiezaRepuesto</class>	
+		<class>infoartex.artex.dominio.Torre</class>	
+		<class>infoartex.artex.dominio.PC</class>
+		<class>infoartex.artex.dominio.Laptop</class>
+		<class>infoartex.artex.dominio.Rol</class>
+		<class>infoartex.artex.dominio.PiezaRecuperada</class>
+		<class>infoartex.artex.dominio.OrdenTrabajo</class>
+		<class>infoartex.artex.dominio.Traslado</class>
+		<class>infoartex.artex.dominio.Mantenimiento</class>
+		<class>infoartex.artex.dominio.ReporteMantenimiento</class>
+		<class>infoartex.artex.dominio.ConfiguracionCorreo</class>
+		<class>infoartex.artex.dominio.TipoMedio</class>
+		<class>infoartex.artex.dominio.ConfiguracionGlobal</class>
+		<properties>
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:postgresql://localhost:5432/artex"/>
+			<property name="javax.persistence.jdbc.password" value="postgres" />
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+			<property name="javax.persistence.jdbc.user" value="postgres" />
+			<property name="eclipselink.logging.level" value="INFO" />
+			<property name="eclipselink.ddl-generation" value="create-tables" />
+		</properties>
+	</persistence-unit>
+</persistence>

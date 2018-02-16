@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Artex - Dashboard</title>
+<script src="../js/lumino.glyphs.js"></script>
+</head>
+
+
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#sidebar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><span>Info</span>Artex <span>T&eacute;cnicos</span></a>
+				<ul class="user-menu">
+					<li class="dropdown pull-right"><a href="#"
+						class="dropdown-toggle" data-toggle="dropdown"><i
+							class="icon-user icon-usuario" location="usuario"></i><span
+							class="caret" style="margin-left: 5px; font-size: 14px;"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#"><i class="icon-user icon-menu"
+									location="perfil"></i></a></li>
+							<li><a href="#"><i class="icon-signout icon-menu"
+									location="logout"></i></a></li>
+						</ul></li>
+				</ul>
+			</div>
+
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<form role="search">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Search">
+			</div>
+		</form>
+		<ul class="nav menu">
+			
+				
+            <li><a href="#"><i class="icon-dashboard icon-menu" location="dashboard"></i></a></li>
+			
+			<li class="parent"><a href="#sub-item-1" data-toggle="collapse"><i class="icon-wrench icon-menu"> </i> <span class="botonesMenuLateral"> Interrupciones</span>  <b class="caret"> </b></a>
+             <ul class="children collapse" id="sub-item-1">
+                <li><a href="#"><i class="icon-check" location="nuevaInterrupcion"></i></a></li>
+                <li><a href="#"><i class="icon-list-alt" location="listarInterrupciones"></i></a></li>
+              
+              </ul>
+            </li>	
+            
+            <li class="parent"><a href="#sub-item-2" data-toggle="collapse"><i class="icon-desktop icon-menu"> </i> <span class="botonesMenuLateral"> Medios inform&aacute;ticos</span>  <b class="caret"> </b></a>
+             <ul class="children collapse" id="sub-item-2">
+                <li><a href="#"><i class="icon-check" location="registrarMedioInformatico"></i></a></li>
+                <li><a href="#"><i class="icon-list-alt" location="listarMedioInfo"></i></a></li>
+                <li><a href="#"><i class="icon-desktop" location="conformarPC"></i></a></li>
+                <li><a href="#"><i class="icon-list-alt" location="listarPC"></i></a></li>
+                
+              
+              </ul>
+            </li>	
+            
+            <li class="parent"><a href="#sub-item-6" data-toggle="collapse"><i class="icon-table icon-menu"> </i> <span class="botonesMenuLateral"> Ordenes de Trabajo</span>  <b class="caret"> </b></a>
+             <ul class="children collapse" id="sub-item-6">
+                <li><a href="#"><i class="icon-check" location="generarOrdenTrabajo"></i></a></li>
+              	<li><a href="#"><i class="icon-list-alt" location="listarOrdenesTrabajo"></i></a></li>
+              </ul>
+            </li>
+            
+            <li class="parent"><a href="#sub-item-7" data-toggle="collapse"><i class="icon-table icon-menu"> </i> <span class="botonesMenuLateral">Mantenimientos</span>  <b class="caret"> </b></a>
+             <ul class="children collapse" id="sub-item-7">
+                <li><a href="#"><i class="icon-check" location="registrarMantenimientoPlanificado"></i></a></li>
+              	<li><a href="#"><i class="icon-list-alt" location="listarMantenimientosPlanificados"></i></a></li>
+              	<li><a href="#"><i class="icon-check" location="generarReporteMantenimiento"></i></a></li>
+              	<li><a href="#"><i class="icon-list-alt" location="listarOrdenesMantenimientos"></i></a></li>
+              </ul>
+            </li>
+            
+			<li role="presentation" class="divider"></li>
+			<li><a href="#"><i class="icon-signout icon-menu"
+									location="logout2"></i></a></li>
+		</ul>
+
+	</div>
+	<!--/.sidebar-->
+
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#"><i class="icon-home"></i></a></li>
+				<li class="active">actual</li>
+			</ol>
+		</div>
+		<div location="contenido"></div>
+	</div>
+</body>
+
+</html>
